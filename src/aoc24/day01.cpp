@@ -64,6 +64,16 @@ namespace aoc24
 
     std::string Day01::solve_puzzle_two()
     {
-        return std::string("Not solved yet");
+        _load_data();
+
+        uint32_t similarity = 0;
+        uint32_t index = 0;
+        for (const auto& item : _list_a)
+        {
+            similarity +=
+                item * std::count(_list_b.begin(), _list_b.end(), item);
+        }
+
+        return std::to_string(similarity);
     }
 }  // namespace aoc24
