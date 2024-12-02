@@ -4,14 +4,15 @@
 
 #include "aoc/advent_of_code.h"
 #include "aoc/day_solution.h"
+#include "aoc24/day01.h"
 
 int main()
 {
     aoc::AdventOfCode aoc24;
 
     // Add solutions
-    aoc24.add_solution(1, std::make_shared<Sol1>());
-    aoc24.add_solution(2, std::make_shared<Sol1>());
+    aoc24.add_solution(1,
+                       std::make_shared<aoc24::Day01>("data/day01-input.txt"));
 
     // Print solutions
     std::cout << "Advent of Code 2024 - C++ version\n";
@@ -27,7 +28,7 @@ int main()
                       << static_cast<uint16_t>(day) << ": ";
             std::cout << "Puzzle 1: " << solution->solve_puzzle_one() << '\n';
             std::cout << std::string(8, ' ')
-                      << "Puzzle 1: " << solution->solve_puzzle_two() << '\n';
+                      << "Puzzle 2: " << solution->solve_puzzle_two() << '\n';
         }
         catch (std::out_of_range&)
         {
