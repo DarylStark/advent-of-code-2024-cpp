@@ -1,0 +1,8 @@
+{
+	"name": "advent-of-code-2024-cpp",
+	"image": "dast1986/slough-dev-dc-cpp:latest",
+	"remoteEnv": {
+		"PROMPTNAME": "AOC24-CPP",
+		"LC_ALL": "C.UTF-8"
+	}
+}
